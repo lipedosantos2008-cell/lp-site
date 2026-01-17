@@ -1,6 +1,23 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   background: #0f172a;
   color: white;
 }
+
+/* Estilo do box de login */
+.box {
+  background: #111;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 380px;
+  border: 1px solid #22c55e33;
+}
+
+/* Sidebar e tabela */
+.admin-container { display: flex; }
+.sidebar { width: 200px; padding: 20px; background: #111; }
+.main-content { flex: 1; padding: 20px; }
+table { width: 100%; border-collapse: collapse; }
+table th, table td { padding: 10px; border: 1px solid #333; }
