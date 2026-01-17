@@ -4,21 +4,21 @@
 async function checkAuth() {
   auth.onAuthStateChanged(async (user) => {
     if (!user) {
-      window.location.href = '../admin.html';
+      window.location.href = 'admin.html';
       return;
     }
 
     const adminDoc = await db.collection('admins').doc(user.uid).get();
     if (!adminDoc.exists) {
       await auth.signOut();
-      window.location.href = '../admin.html';
+      window.location.href = 'admin.html';
     }
   });
 }
 
 function logout() {
   auth.signOut().then(() => {
-    window.location.href = '../admin.html';
+    window.location.href = 'admin.html';
   });
 }
 
@@ -119,4 +119,3 @@ async function approveWithdrawal(id) {
 
   loadWithdrawals();
 }
-
