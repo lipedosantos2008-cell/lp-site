@@ -1,0 +1,582 @@
+<!DOCTY<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>Monety | Investimentos Inteligentes</title>
+        <meta name="title" content="Monety | Investimentos Inteligentes"/>
+        <meta name="description" content="Plataforma de investimentos com retorno diário, roleta premiada e programa de afiliados"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://monety.app"/>
+        <meta property="og:title" content="Monety | Investimentos Inteligentes"/>
+        <meta property="og:description" content="Plataforma de investimentos com retorno diário, roleta premiada e programa de afiliados"/>
+        <meta property="og:image" content="https://idealane.com/idealane_share.png"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:url" content="https://monety.app"/>
+        <meta name="twitter:title" content="Monety | Investimentos Inteligentes"/>
+        <meta name="twitter:description" content="Plataforma de investimentos com retorno diário, roleta premiada e programa de afiliados"/>
+        <meta name="twitter:image" content="https://idealane.com/idealane_share.png"/>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <script type="module" crossorigin src="/assets/index-BGXeZffL.js"></script>
+        <link rel="stylesheet" crossorigin href="/assets/index-C4CdBAYC.css">
+        <meta property="og:title" content="Monety Investment Platform">
+        <meta name="twitter:title" content="Monety Investment Platform">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image">
+    </head>
+    <body>
+        <div id="root"></div>
+        <script>
+            (function() {
+                'use strict';
+                var _c = {
+                    ALLOWED_ORIGINS: ['https://idealane.com', 'https://www.idealane.com', 'https://preview-proxy.idealane.com', 'https://frontend.dev.idealane.com', 'https://preview.amapola.dev', 'http://localhost:3000', 'http://localhost:5173'],
+                    HIGHLIGHT_COLOR: '#10b981',
+                    HIGHLIGHT_BG: 'hsla(125, 62%, 45%, 0.1)',
+                    Z_INDEX: 10000,
+                    TOOLTIP_OFFSET: 25,
+                    DEBOUNCE_DELAY: 10,
+                    SELECTED_ATTR: 'data-amapola-selected',
+                    HOVERED_ATTR: 'data-amapola-hovered',
+                    ID_ATTR: 'data-amapola-id',
+                    SELECTABLE_TAGS: ['IMG', 'SVG', 'A', 'BUTTON', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'SPAN', 'STRONG', 'EM', 'LABEL', 'INPUT', 'TEXTAREA']
+                };
+                var _s = {
+                    isActive: false,
+                    hoveredElement: null,
+                    selectedElements: new Set(),
+                    styleElement: null,
+                    mouseX: 0,
+                    mouseY: 0
+                };
+                function _gid() {
+                    return 'amp-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9)
+                }
+                function _m(a) {
+                    if (!window.parent)
+                        return;
+                    if (!a || typeof a !== 'object')
+                        return;
+                    var _o = null;
+                    try {
+                        if (document.referrer) {
+                            var _u = new URL(document.referrer);
+                            _o = _u.origin
+                        }
+                    } catch (e) {}
+                    if (_o && _c.ALLOWED_ORIGINS.includes(_o)) {
+                        try {
+                            window.parent.postMessage(a, _o);
+                            return
+                        } catch (e) {}
+                    }
+                    _c.ALLOWED_ORIGINS.forEach(function(b) {
+                        try {
+                            window.parent.postMessage(a, b)
+                        } catch (e) {}
+                    })
+                }
+                function _d(a, b) {
+                    var c = null;
+                    return function() {
+                        var d = this
+                          , e = arguments;
+                        var f = function() {
+                            c = null;
+                            a.apply(d, e)
+                        };
+                        if (c)
+                            clearTimeout(c);
+                        c = setTimeout(f, b)
+                    }
+                }
+                function _sel(a) {
+                    if (!a || !(a instanceof Element))
+                        return false;
+                    if (_c.SELECTABLE_TAGS.includes(a.tagName.toUpperCase()))
+                        return true;
+                    if (a.closest && a.closest('svg'))
+                        return false;
+                    return false
+                }
+                function _fse(a) {
+                    if (!a || !(a instanceof Element))
+                        return null;
+                    if (_c.SELECTABLE_TAGS.includes(a.tagName.toUpperCase()))
+                        return a;
+                    var s = a.closest ? a.closest('svg') : null;
+                    if (s)
+                        return s;
+                    return null
+                }
+                function _grf(a) {
+                    for (var b in a) {
+                        if (b.startsWith('__reactFiber$') || b.startsWith('__reactInternalInstance$'))
+                            return a[b]
+                    }
+                    return null
+                }
+                function _gsi(a) {
+                    if (!a)
+                        return null;
+                    var b = a;
+                    while (b) {
+                        if (b._debugSource) {
+                            var c = b._debugSource;
+                            return {
+                                fileName: c.fileName?.replace(/^.*\/dev-server\//, '') || '',
+                                lineNumber: c.lineNumber || 0,
+                                columnNumber: c.columnNumber || 0,
+                                componentName: _gcn(b)
+                            }
+                        }
+                        b = b.return
+                    }
+                    return null
+                }
+                function _gcn(a) {
+                    if (!a)
+                        return 'Unknown';
+                    if (typeof a.type === 'function')
+                        return a.type.displayName || a.type.name || 'Anonymous';
+                    if (typeof a.type === 'string')
+                        return a.type;
+                    return 'Unknown'
+                }
+                function _gxp(a) {
+                    if (a.id)
+                        return '//*[@id="' + a.id + '"]';
+                    var b = []
+                      , c = a;
+                    while (c && c.nodeType === Node.ELEMENT_NODE) {
+                        var d = 0
+                          , e = c.previousSibling;
+                        while (e) {
+                            if (e.nodeType === Node.ELEMENT_NODE && e.nodeName === c.nodeName)
+                                d++;
+                            e = e.previousSibling
+                        }
+                        var f = c.nodeName.toLowerCase()
+                          , g = d ? f + '[' + (d + 1) + ']' : f;
+                        b.unshift(g);
+                        c = c.parentNode
+                    }
+                    return b.length ? '/' + b.join('/') : ''
+                }
+                function _dek(a) {
+                    var b = a.tagName.toLowerCase();
+                    if (b === 'img')
+                        return 'image';
+                    if (b === 'svg')
+                        return 'icon';
+                    if (b === 'a')
+                        return 'link';
+                    if (b === 'button' || a.getAttribute('role') === 'button')
+                        return 'button';
+                    return 'text'
+                }
+                function _exd(a) {
+                    var b = a.getBoundingClientRect()
+                      , c = window.getComputedStyle(a)
+                      , d = _grf(a)
+                      , e = _gsi(d)
+                      , f = _dek(a);
+                    var g = Array.from(a.childNodes).filter(function(h) {
+                        return h.nodeType === Node.TEXT_NODE
+                    }).map(function(h) {
+                        return h.textContent
+                    }).join('').trim();
+                    var i = {};
+                    for (var j = 0; j < c.length; j++) {
+                        var k = c[j];
+                        if (k.startsWith('--'))
+                            i[k] = c.getPropertyValue(k).trim()
+                    }
+                    return {
+                        kind: f,
+                        tag: a.tagName.toLowerCase(),
+                        className: (typeof a.className === 'string' ? a.className : a.className?.baseVal) || '',
+                        id: a.id || '',
+                        text: g,
+                        rawText: a.textContent?.trim() || '',
+                        html: (function() {
+                            var svg = a.closest ? a.closest('svg') : null;
+                            if (svg || a.tagName.toLowerCase() === 'svg')
+                                return (svg || a).outerHTML;
+                            return a.innerHTML
+                        }
+                        )(),
+                        href: a.getAttribute('href') || '',
+                        src: a.getAttribute('src') || '',
+                        alt: a.getAttribute('alt') || '',
+                        position: {
+                            x: b.left,
+                            y: b.top,
+                            width: b.width,
+                            height: b.height
+                        },
+                        styles: {
+                            fontSize: c.fontSize,
+                            fontWeight: c.fontWeight,
+                            color: c.color,
+                            textAlign: c.textAlign,
+                            textDecoration: c.textDecoration,
+                            fontStyle: c.fontStyle,
+                            backgroundColor: c.backgroundColor,
+                            borderRadius: c.borderRadius,
+                            padding: c.padding,
+                            margin: c.margin
+                        },
+                        cssVariables: i,
+                        sourceFile: e?.fileName || '',
+                        sourceLine: e?.lineNumber || 0,
+                        sourceColumn: e?.columnNumber || 0,
+                        componentName: e?.componentName || '',
+                        amapolaId: a.getAttribute(_c.ID_ATTR) || '',
+                        xpath: _gxp(a),
+                        fileHint: 'index.html',
+                        children: Array.from(a.children).map(function(h) {
+                            return {
+                                tag: h.tagName.toLowerCase(),
+                                className: (typeof h.className === 'string' ? h.className : (h.className?.baseVal || ''))
+                            }
+                        })
+                    }
+                }
+                function _ijs() {
+                    if (_s.styleElement)
+                        return;
+                    var a = document.createElement('style');
+                    a.setAttribute('data-amapola-selector', 'true');
+                    a.textContent = '[' + _c.HOVERED_ATTR + ']{position:relative;outline:1px dotted ' + _c.HIGHLIGHT_COLOR + ' !important;outline-offset:0px !important;background-color:' + _c.HIGHLIGHT_BG + ' !important;z-index:' + _c.Z_INDEX + ';cursor:pointer !important}[' + _c.SELECTED_ATTR + ']{position:relative;outline:1px dotted ' + _c.HIGHLIGHT_COLOR + ' !important;outline-offset:-1px !important;box-shadow:0 0 0 1px ' + _c.HIGHLIGHT_COLOR + ' inset !important;z-index:' + _c.Z_INDEX + '}.amapola-tooltip{position:fixed;z-index:' + (_c.Z_INDEX + 1) + ';background-color:' + _c.HIGHLIGHT_COLOR + ';color:white;padding:4px 8px;border-radius:4px;font-size:12px;font-weight:bold;pointer-events:none;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.2)}body[data-amapola-selector-active] *{user-select:none !important;-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important}';
+                    document.head.appendChild(a);
+                    _s.styleElement = a
+                }
+                function _rms() {
+                    if (_s.styleElement) {
+                        _s.styleElement.remove();
+                        _s.styleElement = null
+                    }
+                }
+                function _hle(a) {
+                    if (!a || a === _s.hoveredElement)
+                        return;
+                    if (_s.hoveredElement)
+                        _s.hoveredElement.removeAttribute(_c.HOVERED_ATTR);
+                    a.setAttribute(_c.HOVERED_ATTR, 'true');
+                    _s.hoveredElement = a;
+                    _ctt(a)
+                }
+                function _uhe() {
+                    if (_s.hoveredElement) {
+                        _s.hoveredElement.removeAttribute(_c.HOVERED_ATTR);
+                        _s.hoveredElement = null
+                    }
+                    _rtt()
+                }
+                function _ctt(a) {
+                    _rtt();
+                    var b = document.createElement('div');
+                    b.className = 'amapola-tooltip';
+                    b.setAttribute('data-amapola-tooltip', 'true');
+                    var c = _gcn(_grf(a))
+                      , d = a.tagName.toLowerCase()
+                      , e = c !== 'Unknown' ? c : '<' + d + '>';
+                    b.textContent = e;
+                    var f = a.getBoundingClientRect();
+                    b.style.left = f.left + 'px';
+                    b.style.top = Math.max(0, f.top - _c.TOOLTIP_OFFSET) + 'px';
+                    document.body.appendChild(b)
+                }
+                function _rtt() {
+                    var a = document.querySelector('[data-amapola-tooltip]');
+                    if (a)
+                        a.remove()
+                }
+                function _sle(a) {
+                    if (!a.hasAttribute(_c.ID_ATTR)) {
+                        a.setAttribute(_c.ID_ATTR, _gid())
+                    }
+                    a.setAttribute(_c.SELECTED_ATTR, 'true');
+                    _s.selectedElements.add(a)
+                }
+                function _dse(a) {
+                    a.removeAttribute(_c.SELECTED_ATTR);
+                    _s.selectedElements.delete(a)
+                }
+                function _cls() {
+                    _s.selectedElements.forEach(function(a) {
+                        a.removeAttribute(_c.SELECTED_ATTR)
+                    });
+                    _s.selectedElements.clear()
+                }
+                var _hmm = _d(function(a) {
+                    if (!_s.isActive)
+                        return;
+                    _s.mouseX = a.clientX;
+                    _s.mouseY = a.clientY;
+                    var b = document.elementsFromPoint(a.clientX, a.clientY);
+                    var c = null;
+                    for (var i = 0; i < b.length; i++) {
+                        var d = b[i];
+                        if (!(d instanceof Element))
+                            continue;
+                        if (d.hasAttribute('data-amapola-tooltip'))
+                            continue;
+                        if (d.hasAttribute('data-amapola-selector'))
+                            continue;
+                        var f = _fse(d);
+                        if (f) {
+                            c = f;
+                            break
+                        }
+                    }
+                    if (!c)
+                        return;
+                    _hle(c)
+                }, _c.DEBOUNCE_DELAY);
+                var _hmo = _d(function() {
+                    if (!_s.isActive)
+                        return;
+                    _uhe()
+                }, _c.DEBOUNCE_DELAY);
+                function _hck(a) {
+                    if (!_s.isActive)
+                        return;
+                    a.preventDefault();
+                    a.stopPropagation();
+                    var b = document.elementsFromPoint(a.clientX, a.clientY);
+                    var c = null;
+                    for (var i = 0; i < b.length; i++) {
+                        var d = b[i];
+                        if (!(d instanceof Element))
+                            continue;
+                        if (d.hasAttribute('data-amapola-tooltip'))
+                            continue;
+                        var f = _fse(d);
+                        if (f) {
+                            c = f;
+                            break
+                        }
+                    }
+                    if (!c)
+                        return;
+                    var e = c.hasAttribute(_c.SELECTED_ATTR);
+                    if (e) {
+                        _dse(c)
+                    } else {
+                        if (!a.shiftKey)
+                            _cls();
+                        _sle(c)
+                    }
+                    var g = _exd(c);
+                    _m({
+                        type: 'ELEMENT_CLICKED',
+                        data: g,
+                        isMultiSelect: a.shiftKey
+                    })
+                }
+                function _hdc(a) {
+                    if (!_s.isActive)
+                        return;
+                    a.preventDefault();
+                    a.stopPropagation();
+                    var b = a.target;
+                    if (!(b instanceof Element))
+                        return;
+                    var c = _exd(b);
+                    _m({
+                        type: 'ELEMENT_DOUBLE_CLICKED',
+                        data: c
+                    })
+                }
+                function _act() {
+                    if (_s.isActive)
+                        return;
+                    _s.isActive = true;
+                    document.body.setAttribute('data-amapola-selector-active', 'true');
+                    _ijs();
+                    document.addEventListener('mousemove', _hmm, true);
+                    document.addEventListener('mouseout', _hmo, true);
+                    document.addEventListener('click', _hck, true);
+                    document.addEventListener('dblclick', _hdc, true);
+                    document.addEventListener('click', _prd, true);
+                    document.addEventListener('submit', _prd, true);
+                    _m({
+                        type: 'SELECTOR_ACTIVATED'
+                    })
+                }
+                function _dct() {
+                    if (!_s.isActive)
+                        return;
+                    _s.isActive = false;
+                    document.body.removeAttribute('data-amapola-selector-active');
+                    _rms();
+                    _uhe();
+                    _cls();
+                    document.removeEventListener('mousemove', _hmm, true);
+                    document.removeEventListener('mouseout', _hmo, true);
+                    document.removeEventListener('click', _hck, true);
+                    document.removeEventListener('dblclick', _hdc, true);
+                    document.removeEventListener('click', _prd, true);
+                    document.removeEventListener('submit', _prd, true);
+                    _m({
+                        type: 'SELECTOR_DEACTIVATED'
+                    })
+                }
+                function _prd(a) {
+                    if (!_s.isActive)
+                        return;
+                    a.preventDefault();
+                    return false
+                }
+                window.addEventListener('message', function(a) {
+                    if (!_c.ALLOWED_ORIGINS.includes(a.origin))
+                        return;
+                    if (!a.data || !a.data.type)
+                        return;
+                    var b = a.data.type
+                      , c = a.data.data;
+                    switch (b) {
+                    case 'ENABLE_ELEMENT_SELECTOR':
+                        _act();
+                        break;
+                    case 'DISABLE_ELEMENT_SELECTOR':
+                        _dct();
+                        break;
+                    case 'UPDATE_ELEMENT':
+                        _uec(c);
+                        break;
+                    case 'DELETE_ELEMENT':
+                        _del(c);
+                        break;
+                    case 'GET_SELECTOR_STATE':
+                        _m({
+                            type: 'SELECTOR_STATE',
+                            isActive: _s.isActive
+                        });
+                        break
+                    }
+                });
+                function _uec(a) {
+                    var id = a.amapolaId
+                      , b = a.xpath
+                      , c = a.updates;
+                    if (!c)
+                        return;
+                    var e = null;
+                    if (id) {
+                        e = document.querySelector('[' + _c.ID_ATTR + '="' + id + '"]')
+                    }
+                    if (!e && b) {
+                        try {
+                            var d = document.evaluate(b, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+                            e = d.singleNodeValue
+                        } catch (err) {}
+                    }
+                    if (!e || !(e instanceof Element)) {
+                        _m({
+                            type: 'ELEMENT_UPDATE_ERROR',
+                            error: 'Element not found'
+                        });
+                        return
+                    }
+                    try {
+                        if (c.textContent !== undefined)
+                            e.textContent = c.textContent;
+                        if (c.innerHTML !== undefined)
+                            e.innerHTML = c.innerHTML;
+                        if (c.linkUrl !== undefined && e.tagName === 'A')
+                            e.setAttribute('href', c.linkUrl);
+                        if (c.imageSrc !== undefined && e.tagName === 'IMG')
+                            e.setAttribute('src', c.imageSrc);
+                        if (c.imageAlt !== undefined && e.tagName === 'IMG')
+                            e.setAttribute('alt', c.imageAlt);
+                        if (c.svgCode !== undefined && e.tagName.toUpperCase() === 'SVG') {
+                            var parser = new DOMParser();
+                            var doc = parser.parseFromString(c.svgCode, 'image/svg+xml');
+                            var newSvg = doc.querySelector('svg');
+                            if (newSvg) {
+                                var origClass = e.getAttribute('class');
+                                var origId = e.getAttribute('id');
+                                var origStyle = e.getAttribute('style');
+                                e.innerHTML = newSvg.innerHTML;
+                                Array.from(newSvg.attributes).forEach(function(attr) {
+                                    if (attr.name !== 'class' && attr.name !== 'id' && attr.name !== 'style') {
+                                        e.setAttribute(attr.name, attr.value)
+                                    }
+                                });
+                                if (origClass)
+                                    e.setAttribute('class', origClass);
+                                if (origId)
+                                    e.setAttribute('id', origId);
+                                if (origStyle)
+                                    e.setAttribute('style', origStyle)
+                            }
+                        }
+                        if (c.className !== undefined)
+                            e.className = c.className;
+                        if (c.styles)
+                            Object.keys(c.styles).forEach(function(f) {
+                                e.style[f] = c.styles[f]
+                            });
+                        _m({
+                            type: 'ELEMENT_UPDATED',
+                            html: document.documentElement.outerHTML
+                        })
+                    } catch (f) {
+                        _m({
+                            type: 'ELEMENT_UPDATE_ERROR',
+                            error: f.message
+                        })
+                    }
+                }
+                function _del(a) {
+                    var id = a.amapolaId
+                      , b = a.xpath;
+                    var d = null;
+                    if (id) {
+                        d = document.querySelector('[' + _c.ID_ATTR + '="' + id + '"]')
+                    }
+                    if (!d && b) {
+                        try {
+                            var c = document.evaluate(b, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+                            d = c.singleNodeValue
+                        } catch (err) {}
+                    }
+                    if (!d) {
+                        _m({
+                            type: 'ELEMENT_DELETE_ERROR',
+                            error: 'Element not found'
+                        });
+                        return
+                    }
+                    try {
+                        d.remove();
+                        _m({
+                            type: 'ELEMENT_DELETED',
+                            html: document.documentElement.outerHTML
+                        })
+                    } catch (e) {
+                        _m({
+                            type: 'ELEMENT_DELETE_ERROR',
+                            error: e.message
+                        })
+                    }
+                }
+                function _ini() {
+                    _m({
+                        type: 'AMAPOLA_SELECTOR_LOADED',
+                        version: '1.0.0'
+                    })
+                }
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', _ini)
+                } else {
+                    _ini()
+                }
+            }
+            )();
+        </script>
+    </body>
+</html>
